@@ -1,0 +1,21 @@
+[flake8]
+max-line-length = 120
+max-complexity = 10
+exclude =
+    venv
+docstring-convention = numpy
+ignore =
+    # Missing docstring in public module
+    D100
+    # Missing docstring in public package
+    D104
+    # line break after binary operator (seems to be buggy)
+    W504
+    # 'df' is a bad variable name (opinionated warnings)
+    PD901
+    # Use arithmetic operator instead of method (false positives, see https://github.com/deppen8/pandas-vet/issues/74)
+    PD005
+    # Use '.array' or '.to_array()' instead of '.values'; 'values' is ambiguous
+    PD011
+ignore-decorators = pytest
+inline-quotes = single
